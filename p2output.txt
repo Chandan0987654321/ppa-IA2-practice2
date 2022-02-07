@@ -1,1 +1,88 @@
-
+Breakpoint 1, main () at p2original.c:32
+32       a=input_side();
+(gdb) s
+input_side () at p2original.c:3
+3    {
+(gdb) n
+5      printf ("enter the side of the triangle\n");
+(gdb) n
+enter the side of the triangle
+6      scanf ("%d",&x);
+(gdb) n
+4
+7      return x;
+(gdb) n
+8    }
+(gdb) n
+main () at p2original.c:33
+33       b =input_side();
+(gdb) s
+input_side () at p2original.c:3
+3    {
+(gdb) n
+5      printf ("enter the side of the triangle\n");
+(gdb) n
+enter the side of the triangle
+6      scanf ("%d",&x);
+(gdb) n
+8
+7      return x;
+(gdb) n
+8    }
+(gdb) n
+main () at p2original.c:34
+34       c=input_side();
+(gdb) s
+input_side () at p2original.c:3
+3    {
+(gdb) n
+5      printf ("enter the side of the triangle\n");
+(gdb) n
+enter the side of the triangle
+6      scanf ("%d",&x);
+(gdb) n
+3
+7      return x;
+(gdb) n
+8    }
+(gdb) n
+main () at p2original.c:35
+35       res = check_scalene(a, b, c);
+(gdb) s
+check_scalene (a=4, b=8, c=3) at p2original.c:11
+11     if(a!=b && a!=c && b!=c)
+(gdb) n
+12     return 1;
+(gdb) n
+15   }
+(gdb) n
+main () at p2original.c:36
+36       output(res);
+(gdb) s
+output (isscalene=1) at p2original.c:18
+18     if(isscalene == 1)
+(gdb) n
+20       printf("the triangle is scalene\n");
+(gdb) n
+the triangle is scalene
+27   }
+(gdb) n
+main () at p2original.c:37
+37       return 0;
+(gdb) p a
+$1 = 4
+(gdb) p b
+$2 = 8
+(gdb) p c
+$3 = 3
+(gdb) p res
+$4 = 1
+(gdb) l
+32       a=input_side();
+33       b =input_side();
+34       c=input_side();
+35       res = check_scalene(a, b, c);
+36       output(res);
+37       return 0;
+38     }
+39   
