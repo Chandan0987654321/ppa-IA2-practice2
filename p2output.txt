@@ -25,7 +25,7 @@ input_side () at p2original.c:3
 enter the side of the triangle
 6      scanf ("%d",&x);
 (gdb) n
-8
+6
 7      return x;
 (gdb) n
 8    }
@@ -41,7 +41,7 @@ input_side () at p2original.c:3
 enter the side of the triangle
 6      scanf ("%d",&x);
 (gdb) n
-3
+9
 7      return x;
 (gdb) n
 8    }
@@ -49,7 +49,7 @@ enter the side of the triangle
 main () at p2original.c:35
 35       res = check_scalene(a, b, c);
 (gdb) s
-check_scalene (a=4, b=8, c=3) at p2original.c:11
+check_scalene (a=4, b=6, c=9) at p2original.c:11
 11     if(a!=b && a!=c && b!=c)
 (gdb) n
 12     return 1;
@@ -72,9 +72,9 @@ main () at p2original.c:37
 (gdb) p a
 $1 = 4
 (gdb) p b
-$2 = 8
+$2 = 6
 (gdb) p c
-$3 = 3
+$3 = 9
 (gdb) p res
 $4 = 1
 (gdb) l
@@ -86,3 +86,6 @@ $4 = 1
 37       return 0;
 38     }
 39   
+40
+41   
+(gdb) 

@@ -1,5 +1,5 @@
-#include <stdio.h>
- int input_side()
+#include <stdio.h> 
+int input_side()
  {
    int x;
    printf ("enter the side of the triangle\n");
@@ -38,6 +38,8 @@
    }
  
 
- 
+
+  
+
 
 
