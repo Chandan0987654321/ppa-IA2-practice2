@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 int input_number()
 {
-int a;
+  int a;
 printf("enter a number\n");
 scanf("%d",&a);
 return a;
@@ -39,3 +39,5 @@ int main()
   output(p,q);
   return 0;
 }
+
+

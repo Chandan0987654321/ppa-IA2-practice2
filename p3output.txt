@@ -9,7 +9,7 @@ input_number () at p3original.c:3
 enter a number
 6   scanf("%d",&a);
 (gdb) n
-6
+5
 7   return a;
 (gdb) n
 8   }
@@ -17,7 +17,7 @@ enter a number
 main () at p3original.c:38
 38    q=is_composite(p,q);
 (gdb) s
-is_composite (n=6, composite=0) at p3original.c:13
+is_composite (n=5, composite=0) at p3original.c:13
 13    composite=0;
 (gdb) n
 14    for(int i=1;i<=n;i++)
@@ -29,14 +29,6 @@ is_composite (n=6, composite=0) at p3original.c:13
 14    for(int i=1;i<=n;i++)
 (gdb) n
 16      if(n%i==0)
-(gdb) n
-18      composite +=1;
-(gdb) n
-14    for(int i=1;i<=n;i++)
-(gdb) n
-16      if(n%i==0)
-(gdb) n
-18      composite +=1;
 (gdb) n
 14    for(int i=1;i<=n;i++)
 (gdb) n
@@ -61,16 +53,22 @@ is_composite (n=6, composite=0) at p3original.c:13
 main () at p3original.c:39
 39    output(p,q);
 (gdb) s
-output (n=6, a=4) at p3original.c:25
+output (n=5, a=2) at p3original.c:25
 25    if(a>2)
 (gdb) n
-27    printf("the  number is composite\n",n);
+31    printf("the number is not composite\n",n);
 (gdb) n
-the  number is composite
+the number is not composite
 33  }
 (gdb) n
 main () at p3original.c:40
 40    return 0;
+(gdb) p p
+$1 = 5
+(gdb) p q
+$2 = 2
+(gdb) p r
+$3 = <optimized out>
 (gdb) l
 35  {
 36    int p,q,r;
