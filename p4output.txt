@@ -1,1 +1,125 @@
-
+Breakpoint 1, main () at p4original.c:39
+39  {
+(gdb) n
+41    n=input();
+(gdb) s
+input () at p4original.c:3
+3   {
+(gdb) n
+5     printf("enter the size of an array\n");
+(gdb) n
+enter the size of an array
+6     scanf("%d",&n);
+(gdb) n
+3
+7     return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p4original.c:42
+42    int a[n];
+(gdb) s
+43    input_array(n,a);
+(gdb) s
+input_array (n=3, a=0x7fffacfdf8b0) at p4original.c:11
+11  printf("enter the numbers");
+(gdb) n
+12  for(int i=0;i<n;i++){
+(gdb) n
+13    scanf("%d",&a[i]);
+(gdb) n
+enter the numbers4
+12  for(int i=0;i<n;i++){
+(gdb) n
+13    scanf("%d",&a[i]);
+(gdb) n
+5
+12  for(int i=0;i<n;i++){
+(gdb) n
+13    scanf("%d",&a[i]);
+(gdb) n
+1
+12  for(int i=0;i<n;i++){
+(gdb) n
+15  }
+(gdb) n
+main () at p4original.c:44
+44    sum=sum_composite(n,a);
+(gdb) s
+sum_composite (n=3, a=0x7fffacfdf8b0) at p4original.c:18
+18    int sum=0,count=0;
+(gdb) n
+19    for(int i=0;i<n;i++){
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+21      if(a[i]%j==0)
+(gdb) n
+23        count+=1;
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+21      if(a[i]%j==0)
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+26      if(count>=1)
+(gdb) n
+28        sum+=a[i];
+(gdb) n
+19    for(int i=0;i<n;i++){
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+21      if(a[i]%j==0)
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+21      if(a[i]%j==0)
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+21      if(a[i]%j==0)
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+26      if(count>=1)
+(gdb) n
+28        sum+=a[i];
+(gdb) n
+19    for(int i=0;i<n;i++){
+(gdb) n
+20      for(int j=2;j<a[i];j++){
+(gdb) n
+26      if(count>=1)
+(gdb) n
+28        sum+=a[i];
+(gdb) n
+19    for(int i=0;i<n;i++){
+(gdb) n
+32      return sum;
+(gdb) n
+33  }
+(gdb) n
+main () at p4original.c:45
+45    output(sum);
+(gdb) s
+output (sum=10) at p4original.c:36
+36    printf("the sum is %d",sum);
+(gdb) n
+37  }
+(gdb) n
+main () at p4original.c:46
+46    return 0;
+(gdb) n
+48  }(gdb) p n
+$1 = 3
+(gdb) p sum
+$2 = 10
+(gdb) l
+43    input_array(n,a);
+44    sum=sum_composite(n,a);
+45    output(sum);
+46    return 0;
+47
+48  }(gdb) 
